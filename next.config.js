@@ -4,3 +4,10 @@ const nextConfig = {
 }
 
 module.exports = nextConfig
+
+module.exports = {
+  images: {
+    domains: ['www.headless.the-pixel-family.com'],
+  },
+  // Reste de votre configuration...
+};
