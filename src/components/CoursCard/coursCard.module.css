@@ -1,14 +1,16 @@
+/* Styles communs à toutes les cartes */
 .card {
-    /* styles communs à toutes les cartes */
-  }
+  color: black;
   
-  .wordpress {
-    background: #0000; /* Assurez-vous que la valeur est une couleur valide, par exemple #0000ff */
-  }
-  
-  .notion {
-    background: #FFFF; /* Assurez-vous que la valeur est une couleur valide, par exemple #ff0000 */
-  }
-  
-  /* ... autres classes pour différentes catégories */
-  
+}
+
+/* Styles spécifiques pour les catégories */
+.wordpressText {
+  color: green; /* Texte vert pour la catégorie WordPress */
+}
+
+.notionText {
+  color: blue; /* Texte bleu pour la catégorie Notion */
+}
+
+/* Ajoutez des classes similaires pour d'autres catégories si nécessaire */
