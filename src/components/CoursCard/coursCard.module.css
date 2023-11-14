@@ -1,0 +1,14 @@
+.card {
+    /* styles communs à toutes les cartes */
+  }
+  
+  .wordpress {
+    background: #0000; /* Assurez-vous que la valeur est une couleur valide, par exemple #0000ff */
+  }
+  
+  .notion {
+    background: #FFFF; /* Assurez-vous que la valeur est une couleur valide, par exemple #ff0000 */
+  }
+  
+  /* ... autres classes pour différentes catégories */
+  
