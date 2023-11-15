@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
+//Composant
 import CoursCard from '../../../components/CoursCard/CoursCard';
+//Call API
 import { fetchCours } from '../../../api/coursApi';
 import { fetchCategories } from '../../../api/categoriesApi';
+//Types
 import {CoursItem} from '../../../types/cours';
 import {CategoryItem} from '../../../types/categorie';
 
@@ -22,8 +25,7 @@ const CoursList: React.FC = () => {
       } catch (error) {
         console.error(error);
       }
-    }
-    
+    } 
     fetchData();
   }, []);
 
