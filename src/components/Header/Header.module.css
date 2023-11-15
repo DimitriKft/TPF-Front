@@ -1,0 +1,32 @@
+/* Header.module.css */
+.header {
+    background-color: blue;
+    /* autres styles pour le header */
+  }
+  
+  .nav {
+    background-color: blue;
+    /* styles pour le nav */
+  }
+  
+  .navList {
+    list-style-type: none;
+    /* autres styles pour la liste de navigation */
+  }
+  
+  .navItem {
+    color: red;;
+    /* display: inline;
+    margin-right: 20px; */
+    /* autres styles pour les éléments de la liste */
+  }
+  
+  .navLink {
+    text-decoration: none;
+    color: white;
+    /* autres styles pour les liens */
+  }
+  
+  .pItem{
+    color:red;
+  }
