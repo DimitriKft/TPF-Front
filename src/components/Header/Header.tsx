@@ -1,8 +1,16 @@
 // Header.tsx
 import Link from 'next/link';
 import styles from './Header.module.css'; // Assurez-vous que le chemin est correct
+import { useRouter } from 'next/router'; // Ajoutez cette ligne
 
 const Header = () => {
+  const router = useRouter();
+        4
+        const getLinkClassName = (path: string): string => {
+          return router.pathname === path ? styles.activeLink : styles.link;
+        };
+
+  console.log('Chemin actuel:', router.pathname);
   return (
     <header className={styles.header}>
      <nav className={styles.navbar}>
@@ -13,16 +21,10 @@ const Header = () => {
  
           </Link>
       <Link href="/">
-        <p className={styles.link}>Accueil</p>
+      <p className={getLinkClassName("/")}>Accueil</p>
       </Link>
       <Link href="/cours">
-        <p className={styles.link}>Cours</p>
-      </Link>
-      <Link href="/tuto">
-        <p className={styles.link}>Tuto</p>
-      </Link>
-      <Link href="/tarif">
-        <p className={styles.link}>Tarif</p>
+        <p className={getLinkClassName("/cours")}>Cours</p>
       </Link>
       {/* Ajoutez d'autres liens ici au besoin */}
     </nav>

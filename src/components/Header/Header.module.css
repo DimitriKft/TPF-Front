@@ -1,23 +1,44 @@
 .navbar {
   background-color: transparent;
   display: flex;
-  justify-content: space-around; /* Ajustez selon la disposition souhaitée */
+  justify-content: space-around;
+  /* Ajustez selon la disposition souhaitée */
   align-items: center;
   padding: 1rem;
-  height: 60px; 
+  height: 60px;
 }
 
 .link {
-  color: white; /* Couleur du texte pour les liens */
-  text-decoration: none; /* Pas de soulignement pour les liens */
+  text-decoration: none;
   padding: 0.5rem 1rem;
+  color: #10D678;
+  text-align: center;
+  font-size: 14.531px;
+  font-weight: 700;
+  line-height: 18px;
 }
 
-.link:hover {
-  background-color: #000; /* Couleur de fond au survol */
-}
+
 
 .logo {
-  height: 200px; /* ou toute autre taille appropriée */
-  width: auto; /* pour maintenir le ratio de l'image */
+  height: 200px;
+  /* ou toute autre taille appropriée */
+  width: auto;
+  /* pour maintenir le ratio de l'image */
+  fill: #0070f3;
+  color: #0070f3;
+}
+
+.activeLink {
+  background: linear-gradient(90deg, #FFCFAA 15.79%, #FA6EB9 80.92%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-align: center;
+  font-size: 14.531px;
+  font-weight: 700;
+  line-height: 18px;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
 }
