@@ -1,32 +1,23 @@
-/* Header.module.css */
-.header {
-    background-color: blue;
-    /* autres styles pour le header */
-  }
-  
-  .nav {
-    background-color: blue;
-    /* styles pour le nav */
-  }
-  
-  .navList {
-    list-style-type: none;
-    /* autres styles pour la liste de navigation */
-  }
-  
-  .navItem {
-    color: red;;
-    /* display: inline;
-    margin-right: 20px; */
-    /* autres styles pour les éléments de la liste */
-  }
-  
-  .navLink {
-    text-decoration: none;
-    color: white;
-    /* autres styles pour les liens */
-  }
-  
-  .pItem{
-    color:red;
-  }
+.navbar {
+  background-color: transparent;
+  display: flex;
+  justify-content: space-around; /* Ajustez selon la disposition souhaitée */
+  align-items: center;
+  padding: 1rem;
+  height: 60px; 
+}
+
+.link {
+  color: white; /* Couleur du texte pour les liens */
+  text-decoration: none; /* Pas de soulignement pour les liens */
+  padding: 0.5rem 1rem;
+}
+
+.link:hover {
+  background-color: #000; /* Couleur de fond au survol */
+}
+
+.logo {
+  height: 200px; /* ou toute autre taille appropriée */
+  width: auto; /* pour maintenir le ratio de l'image */
+}

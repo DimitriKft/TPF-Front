@@ -5,21 +5,27 @@ import styles from './Header.module.css'; // Assurez-vous que le chemin est corr
 const Header = () => {
   return (
     <header className={styles.header}>
-      <nav className={styles.nav}>
-        <ul className={styles.navList}>
-          <li className={styles.navItem}>
-            <Link href="/" className={styles.navLink}>
-              Accueil
-            </Link>
-          </li>
-          <li className={styles.navItem}>
-            <Link href="/cours" className={styles.navLink}>
-              Cours
-            </Link>
-          </li>
-          {/* Autres liens */}
-        </ul>
-      </nav>
+     <nav className={styles.navbar}>
+     <Link href="/">
+
+     <img src="/logoTpf.svg" alt="Logo" className={styles.logo} />
+
+ 
+          </Link>
+      <Link href="/">
+        <p className={styles.link}>Accueil</p>
+      </Link>
+      <Link href="/cours">
+        <p className={styles.link}>Cours</p>
+      </Link>
+      <Link href="/tuto">
+        <p className={styles.link}>Tuto</p>
+      </Link>
+      <Link href="/tarif">
+        <p className={styles.link}>Tarif</p>
+      </Link>
+      {/* Ajoutez d'autres liens ici au besoin */}
+    </nav>
     </header>
   );
 };
