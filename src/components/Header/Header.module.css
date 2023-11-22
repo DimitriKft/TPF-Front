@@ -1,15 +1,19 @@
+.headerContainer {
+  width: 100%; /* S'étend sur toute la largeur */
+}
+
+.header {
+  width: 100%; /* S'étend sur toute la largeur */
+}
+
 .navbar {
-  background-color: transparent;
   display: flex;
-  justify-content: space-around;
-  /* Ajustez selon la disposition souhaitée */
+  justify-content: space-between; /* Espacer les liens uniformément */
   align-items: center;
-  padding: 1rem;
   height: 60px;
 }
 
 .link {
-  text-decoration: none;
   padding: 0.5rem 1rem;
   color: #10D678;
   text-align: center;
@@ -21,12 +25,10 @@
 
 
 .logo {
-  height: 200px;
-  /* ou toute autre taille appropriée */
-  width: auto;
-  /* pour maintenir le ratio de l'image */
-  fill: #0070f3;
-  color: #0070f3;
+  height: 150px; /* Hauteur initiale */
+  transform: scale(1.5); /* Ajustez la valeur (1.5) selon la taille que vous souhaitez */
+  transform-origin: center; /* Définir le point d'origine de la transformation au centre */
+  /* Autres styles de votre logo, si nécessaire */
 }
 
 .activeLink {
@@ -34,11 +36,26 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
   text-align: center;
   font-size: 14.531px;
   font-weight: 700;
   line-height: 18px;
-  text-decoration: none;
   padding: 0.5rem 1rem;
 }
+
+.link:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Blanc avec une transparence de 20% */
+  border-radius: 10px; /* Bords arrondis, vous pouvez ajuster la valeur */
+  padding: 8px 18px; /* Espacement interne, ajustez selon besoin */
+  transition: background-color 0.3s; /* Effet de transition doux */
+  border: 1px solid  #10D678;
+
+}
+
+.navbar a {
+  text-decoration: none;
+}
+
+
+
+

@@ -5,30 +5,34 @@ import { useRouter } from 'next/router'; // Ajoutez cette ligne
 
 const Header = () => {
   const router = useRouter();
-        4
-        const getLinkClassName = (path: string): string => {
-          return router.pathname === path ? styles.activeLink : styles.link;
-        };
+  4
+  const getLinkClassName = (path: string): string => {
+    return router.pathname === path ? styles.activeLink : styles.link;
+  };
 
   console.log('Chemin actuel:', router.pathname);
   return (
-    <header className={styles.header}>
-     <nav className={styles.navbar}>
-     <Link href="/">
-
-     <img src="/logoTpf.svg" alt="Logo" className={styles.logo} />
-
- 
+    <div className={styles.headerContainer}>
+      <header className={styles.header}>
+        <nav className={styles.navbar}>
+          <Link href="/">
+            <img src="/logoTpf.svg" alt="Logo" className={styles.logo} />
           </Link>
-      <Link href="/">
-      <p className={getLinkClassName("/")}>Accueil</p>
-      </Link>
-      <Link href="/cours">
-        <p className={getLinkClassName("/cours")}>Cours</p>
-      </Link>
-      {/* Ajoutez d'autres liens ici au besoin */}
-    </nav>
-    </header>
+          <Link href="/">
+            <p className={getLinkClassName("/")}>Accueil</p>
+          </Link>
+          <Link href="/cours">
+            <p className={getLinkClassName("/cours")}>Cours</p>
+          </Link>
+          <Link href="/tuto">
+            <p className={getLinkClassName("/tuto")}>Tutoriels</p>
+          </Link>
+          <Link href="/traif">
+            <p className={getLinkClassName("/tarif")}>Tarif</p>
+          </Link>
+        </nav>
+      </header>
+    </div>
   );
 };
 

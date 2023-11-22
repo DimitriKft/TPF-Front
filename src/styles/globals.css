@@ -1,7 +1,10 @@
 body{
+    padding: 0 200px;
     background: linear-gradient(180deg, #312583 0%, #000 100%);
     background-repeat: no-repeat;
     background-attachment: fixed; /* Optionnel: cela fixera le fond lors du défilement */
     background-size: cover; /* Assurez-vous que le dégradé couvre tout le body */
     font-family: 'Poppins', sans-serif;
+
+  
 }
