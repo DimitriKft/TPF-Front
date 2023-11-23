@@ -5,6 +5,11 @@ body{
     background-attachment: fixed; /* Optionnel: cela fixera le fond lors du défilement */
     background-size: cover; /* Assurez-vous que le dégradé couvre tout le body */
     font-family: 'Poppins', sans-serif;
-
-  
 }
+
+
+@media (max-width: 1000px) {
+    body{
+        padding: 0px;
+    }
+  }

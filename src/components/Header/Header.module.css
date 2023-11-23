@@ -63,4 +63,66 @@
 }
 
 
+
+
+
+
+
+
 /*RESPONSIVE*/
+
+.responsiveMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px; 
+}
+
+
+.burgerMenu {
+  display: none; /* Par défaut, le burger menu est caché en mode desktop */
+}
+
+/* Style du menu responsive qui s'affiche en mode burger */
+.navResponsive {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alignez les liens à gauche */
+  background-color: #fff; /* Fond de votre choix pour le menu */
+  position: absolute;
+  top: 60px; /* La hauteur de votre en-tête */
+  width: 100%; /* Le menu responsive prend toute la largeur */
+}
+
+
+/* Style de la barre de navigation quand elle est active en mode responsive */
+.navActive {
+  display: none; /* Cachez la barre de navigation en mode responsive */
+}
+.logoResponsive{
+  margin-right: 30px;
+  display: none;
+}
+
+/* Media query pour le mode responsive */
+@media (max-width: 1000px) {
+  .burgerMenu {
+    display: block; /* Affichez le burger menu en mode responsive */
+    margin-right: 30px;
+  }
+
+  .navbar, .logo {
+    display: none; /* Cachez la navbar et le logo de bureau en mode responsive */
+  }
+
+  .logoResponsive {
+    display: block; /* Affichez le logo responsive en mode responsive */
+    height: 120px;
+    transform: scale(1.5); 
+    transform-origin: center; 
+  }
+
+  .navActive {
+    display: flex; /* Affichez la navbar quand elle est active en mode responsive */
+  }
+}
