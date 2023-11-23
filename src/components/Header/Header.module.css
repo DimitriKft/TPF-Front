@@ -20,6 +20,8 @@
   font-size: 14.531px;
   font-weight: 700;
   line-height: 18px;
+  display: flex; /* Si vous voulez également que le texte soit un flex container */
+  align-items: center;
 }
 
 
@@ -57,5 +59,15 @@
 }
 
 
+.link-container {
+  display: flex;
+  align-items: center; /* Aligner verticalement l'icône et le texte */
 
+}
+.icon{
+  color: #10D678;
+}
 
+.icon-active {
+  color: #FA6EB9; /* La couleur rose que vous utilisez pour le texte actif */
+}
