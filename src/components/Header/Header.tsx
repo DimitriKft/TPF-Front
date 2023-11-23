@@ -1,7 +1,7 @@
 // Header.tsx
 import Link from 'next/link';
-import styles from './Header.module.css'; // Assurez-vous que le chemin est correct
-import { useRouter } from 'next/router'; // Ajoutez cette ligne
+import styles from './Header.module.css'; 
+import { useRouter } from 'next/router'; 
 import { MinusSquare, CreditCard, Codesandbox, Box } from 'react-feather';
 
 const Header = () => {
@@ -11,7 +11,7 @@ const Header = () => {
     return router.pathname === path ? styles.activeLink : styles.link;
   };
 
-  console.log('Chemin actuel:', router.pathname);
+ 
   return (
     <div className={styles.headerContainer}>
       <header className={styles.header}>

@@ -1,73 +1,66 @@
-.headerContainer {
-  width: 100%; /* S'étend sur toute la largeur */
-}
+/*NAVBAR DESKTOP*/
 
-.header {
-  width: 100%; /* S'étend sur toute la largeur */
+.headerContainer {
+  width: 100%; 
 }
 
 .navbar {
   display: flex;
-  justify-content: space-between; /* Espacer les liens uniformément */
+  justify-content: space-between; 
   align-items: center;
   height: 60px;
 }
 
-.link {
-  padding: 0.5rem 1rem;
-  color: #10D678;
-  text-align: center;
-  font-size: 14.531px;
-  font-weight: 700;
-  line-height: 18px;
-  display: flex; /* Si vous voulez également que le texte soit un flex container */
-  align-items: center;
-}
-
-
-
-.logo {
-  height: 150px; /* Hauteur initiale */
-  transform: scale(1.5); /* Ajustez la valeur (1.5) selon la taille que vous souhaitez */
-  transform-origin: center; /* Définir le point d'origine de la transformation au centre */
-  /* Autres styles de votre logo, si nécessaire */
-}
-
-.activeLink {
-  background: linear-gradient(90deg, #FFCFAA 15.79%, #FA6EB9 80.92%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-align: center;
-  font-size: 14.531px;
-  font-weight: 700;
-  line-height: 18px;
-  padding: 0.5rem 1rem;
-}
-
-.link:hover {
-  background-color: rgba(255, 255, 255, 0.2); /* Blanc avec une transparence de 20% */
-  border-radius: 10px; /* Bords arrondis, vous pouvez ajuster la valeur */
-  padding: 8px 18px; /* Espacement interne, ajustez selon besoin */
-  transition: background-color 0.3s; /* Effet de transition doux */
-  border: 1px solid  #10D678;
-
-}
 
 .navbar a {
   text-decoration: none;
 }
 
-
-.link-container {
-  display: flex;
-  align-items: center; /* Aligner verticalement l'icône et le texte */
-
+.logo {
+  height: 150px;
+  transform: scale(1.5); 
+  transform-origin: center; 
 }
+
+
 .icon{
   color: #10D678;
 }
 
 .icon-active {
-  color: #FA6EB9; /* La couleur rose que vous utilisez pour le texte actif */
+  color: #FA6EB9; 
 }
+
+.activeLink {
+  background: linear-gradient(90deg, #FFCFAA 10.79%, #FA6EB9 70.92%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+  margin-left: 10px;
+}
+
+.link-container {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  text-align: center;
+
+}
+
+.link-container .link {
+  color: #10D678;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+  margin-left: 10px;
+}
+
+.link-container .icon {
+  color: #10D678;
+}
+
+
+/*RESPONSIVE*/
