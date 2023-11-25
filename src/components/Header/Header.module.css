@@ -105,21 +105,57 @@
 }
 
 /* Media query pour le mode responsive */
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .burgerMenu {
-    display: block; /* Affichez le burger menu en mode responsive */
-    margin-right: 30px;
+    background: linear-gradient(180deg, #312583 0%, #000 100%);
+    border-radius: 50%; /* Rend le bouton circulaire */
+    border: 1px solid #10D678; 
+    width: 50px; /* Largeur du bouton */
+    height: 50px; /* Hauteur du bouton */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Pour positionner absolument les lignes du menu à l'intérieur */
+    background: linear-gradient(90deg, #844FFC 0%, #000 100%);
+    box-shadow: 0px 20px 40px 0px #6042F4;
   }
+  
+  .burgerMenu:before, .burgerMenu:after {
+    content: '';
+    position: absolute;
+    width: 30px; /* Largeur des lignes du menu */
+    height: 1px; /* Hauteur des lignes du menu */
+    background: #FA6EB9; /* Couleur des lignes du menu */
+    transition: all 0.3s; /* Transition pour l'animation */
+  }
+  
+  .burgerMenu:before {
+    top: 18px; /* Position de la ligne du haut */
+  }
+ 
+  
+  .burgerMenu:after {
+    bottom: 18px; /* Position de la ligne du bas */
+  }
+  
+
 
   .navbar, .logo {
     display: none; /* Cachez la navbar et le logo de bureau en mode responsive */
   }
 
   .logoResponsive {
-    display: block; /* Affichez le logo responsive en mode responsive */
-    height: 120px;
-    transform: scale(1.5); 
+    display: block;
+
+    margin: 0 auto; /* Centre l'image horizontalement */
+
+    height: 150px;
+    transform: scale(1.5);
     transform-origin: center; 
+  }
+
+  .containerLogo {
+    padding-left: 30px; /* Ajoutez un padding gauche au conteneur */
   }
 
   .navActive {

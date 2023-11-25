@@ -26,17 +26,18 @@ const Header = () => {
       <header className={styles.header}>
         <div className={styles.responsiveMenu}>
           <Link href="/">
+            <div className='containerLogo'>
             <img src="/logoTpf.svg" alt="Logo" className={styles.logoResponsive} />
+            </div>
           </Link>
-          <button className={styles.burgerMenu} onClick={toggleMenu}>
-            <Menu />
-          </button>
+          <button className={styles.burgerMenu} onClick={toggleMenu}></button>
         </div>
 
         {/* Menu déroulant pour le mode responsive */}
         {isMenuOpen && (
           <nav className={styles.navResponsive}>
             {/* Ajoutez ici vos liens pour le menu responsive */}
+            <p>YOo</p>
             {/* Vous pouvez réutiliser getLinkClassName pour les liens */}
           </nav>
         )}
