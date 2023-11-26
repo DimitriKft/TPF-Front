@@ -1,78 +1,75 @@
-// // Header.tsx
-
-
+// Header.tsx
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import styles from './Header.module.css';
+import styles from './Header.module.css'; // Assurez-vous que ce fichier CSS existe et est correctement configuré
 import { useRouter } from 'next/router';
-
- import { MinusSquare, CreditCard, Codesandbox, Box, Menu } from 'react-feather'; // Importez l'icône Menu
+import Button from '@mui/material/Button';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import IconButton from '@mui/material/IconButton';
+import Drawer from '@mui/material/Drawer';
+import MenuIcon from '@mui/icons-material/Menu';
+import Box from '@mui/material/Box';
+import Image from 'next/image';
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const router = useRouter();
+  const [mobileOpen, setMobileOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
   };
 
-  const getLinkClassName = (path: string): string => {
-    return router.pathname === path ? styles.activeLink : styles.link;
-  };
+  const drawer = (
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+      <Link href="/" passHref>
+        <Button sx={{ my: 2 }}>Accueil</Button>
+      </Link>
+      <Link href="/cours" passHref>
+        <Button sx={{ my: 2 }}>Cours</Button>
+      </Link>
+      {/* ... autres liens ... */}
+    </Box>
+  );
 
   return (
-    <div className={styles.headerContainer}>
-      <header className={styles.header}>
-        <div className={styles.responsiveMenu}>
-          <Link href="/">
-            <div className='containerLogo'>
-            <img src="/logoTpf.svg" alt="Logo" className={styles.logoResponsive} />
-            </div>
-          </Link>
-          <button className={styles.burgerMenu} onClick={toggleMenu}></button>
-        </div>
-
-        {/* Menu déroulant pour le mode responsive */}
-        {isMenuOpen && (
-          <nav className={styles.navResponsive}>
-            {/* Ajoutez ici vos liens pour le menu responsive */}
-            <p>YOo</p>
-            {/* Vous pouvez réutiliser getLinkClassName pour les liens */}
-          </nav>
-        )}
-
-        {/* Barre de navigation principale pour le mode desktop */}
-        <nav className={styles.navbar}>
-          <Link href="/">
-            <img src="/logoTpf.svg" alt="Logo" className={styles.logo} />
-          </Link>
-          <Link href="/" className={styles['link-container']}>
-            <Box className={router.pathname === "/" ? styles['icon-active'] : styles.icon} />
-            <p className={getLinkClassName("/")}>Accueil</p>
-          </Link>
-          <Link href="/cours" className={styles['link-container']}>
-            <Codesandbox className={router.pathname === "/cours" ? styles['icon-active'] : styles.icon} />
-            <p className={getLinkClassName("/cours")}>Cours</p>
-          </Link>
-          <Link href="/tuto" className={styles['link-container']}>
-            <MinusSquare className={router.pathname === "/tarif" ? styles['icon-active'] : styles.icon} />
-            <p className={getLinkClassName("/tuto")}>Tutoriels</p>
-          </Link>
-          <Link href="/tarif" className={styles['link-container']}>
-            <CreditCard className={router.pathname === "/tarif" ? styles['icon-active'] : styles.icon} />
-            <p className={getLinkClassName("/tarif")}>Tarif</p>
-          </Link>
-        </nav>
-      </header>
-    </div>
+    <Box sx={{ display: 'flex' }}>
+      <AppBar position="static">
+        <Toolbar sx={{ justifyContent: 'space-between' }}>
+          {/* Logo et liens seront visibles seulement en vue large (sm et plus) */}
+          <Box sx={{ display: { xs: 'none', sm: 'block' }, mr: 'auto' }}>
+            <Link href="/" passHref>
+              <Image src="/logoTpf.svg" alt="Logo" width={120} height={60} />
+            </Link>
+            {/* ... autres liens ... */}
+          </Box>
+          {/* IconButton pour le menu burger, maintenant à droite */}
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            onClick={handleDrawerToggle}
+            sx={{ ml: 'auto', display: { xs: 'block', sm: 'none' } }}
+          >
+            <MenuIcon />
+          </IconButton>
+        </Toolbar>
+      </AppBar>
+      <Drawer
+        variant="temporary"
+        open={mobileOpen}
+        onClose={handleDrawerToggle}
+        ModalProps={{
+          keepMounted: true, // Meilleure performance d'ouverture sur mobile.
+        }}
+        sx={{
+          display: { xs: 'block', sm: 'none' },
+          '& .MuiDrawer-paper': { boxSizing: 'border-box', width: 240 },
+        }}
+      >
+        {drawer}
+      </Drawer>
+    </Box>
   );
 };
 
 export default Header;
-
-
-
-
-
-
