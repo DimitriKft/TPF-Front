@@ -32,7 +32,7 @@ const Header = () => {
 
 
   const drawer = (
-    <Box
+    <Box 
       onClick={handleDrawerToggle}
       sx={{ textAlign: 'center' }}
     >
@@ -42,19 +42,22 @@ const Header = () => {
         justifyContent="center"
         alignItems="center"
       >
-        <Link href="/" passHref >
-            <IconButton className={`${styles.icon} ${router.pathname === '/' ? styles.iconActive : ''}`}>
+        <div className={styles.blokLinkBurger} >
+        <Link href="/" passHref className={styles.linkBurger}>
+            <IconButton className={styles.icon}>
               <MapsHomeWorkTwoToneIcon  className={router.pathname === "/" ? styles['icon-active'] : styles.icon} />
             </IconButton>
               <Button className={`${styles.navLink} ${activeLinkClass('/')}`}>Accueil</Button>
             </Link>
-            <Link href="/cours" passHref >
+            <hr className={styles.divider} />
+            <Link href="/cours" passHref className={styles.linkBurger}>
               <IconButton className={styles.icon}>
-                <AssignmentTwoToneIcon />
+                <AssignmentTwoToneIcon  className={router.pathname === "/cours" ? styles['icon-active'] : styles.icon}/>
               </IconButton>
               <Button className={`${styles.navLink} ${activeLinkClass('/cours')}`}>Cours</Button>
             </Link>
-
+            <hr className={styles.divider} />
+            </div>
       </Stack>
     </Box>
   );
@@ -72,7 +75,7 @@ const Header = () => {
             </Link>
             <Link href="/cours" passHref >
               <IconButton className={styles.icon}>
-                <AssignmentTwoToneIcon />
+              <AssignmentTwoToneIcon  className={router.pathname === "/cours" ? styles['icon-active'] : styles.icon}/>
               </IconButton>
               <Button className={`${styles.navLink} ${activeLinkClass('/cours')}`}>Cours</Button>
             </Link>

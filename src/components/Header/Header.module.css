@@ -14,16 +14,15 @@
 }
 
 .linkButton {
-  margin-left: 20px; /* Ajouter de la marge à gauche */
-  margin-right: 200px; /* Ajouter de la marge à droite */
-  /* ... autres styles ... */
+  margin-left: 20px; 
+  margin-right: 200px; 
+
 }
 
 .navLink {
   color: #10D678;
   font-size: 16px;
   font-weight: 600;
-  line-height: 18px;
   padding-left: 1px;
 }
 
@@ -35,11 +34,11 @@
   -webkit-text-fill-color: transparent;
   font-size: 16px;
   font-weight: 600;
-  line-height: 18px;
-  padding-left: 1px;
 }
 
-
+.iconButton .icon {
+  margin-right: 5px; /* Espace entre l'icône et le texte */
+}
 .icon{
   color: #10D678;
 }
@@ -47,14 +46,36 @@
 .iconButton {
   display: flex;
   align-items: center;
-padding-right: 1px;
-}
 
-.iconButton .icon {
-  margin-right: 1px; /* Adjust the spacing to your preference */
 }
 
 .icon-active  {
   color: #FA6EB9;
 }
 
+
+
+.navLink, .activeLink {
+  padding-left: 0; /* Pour aligner le texte avec les icônes */
+}
+
+
+
+.blokLinkBurger{
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.linkBurger{
+  padding-top: 30px;
+}
+
+.divider {
+  width: 140px;
+  height: 0.5px;
+  background: #FA6EB9; /* Utilisez la couleur de fond de votre choix */
+  margin-top: 10px; /* Ajustez l'espacement au-dessus et en dessous du diviseur */
+  margin-bottom: 10px;
+}
