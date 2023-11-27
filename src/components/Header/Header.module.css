@@ -9,13 +9,15 @@
 }
 
 .transparentAppBar {
-  background-color: transparent; /* Définir la couleur de fond comme transparente */
-  box-shadow: none; /* Optionnel: supprimer l'ombre de la barre si vous le souhaitez */
+  background-color: transparent;
+  /* Définir la couleur de fond comme transparente */
+  box-shadow: none;
+  /* Optionnel: supprimer l'ombre de la barre si vous le souhaitez */
 }
 
 .linkButton {
-  margin-left: 20px; 
-  margin-right: 200px; 
+  margin-left: 20px;
+  margin-right: 200px;
 
 }
 
@@ -37,9 +39,11 @@
 }
 
 .iconButton .icon {
-  margin-right: 5px; /* Espace entre l'icône et le texte */
+  margin-right: 5px;
+  /* Espace entre l'icône et le texte */
 }
-.icon{
+
+.icon {
   color: #10D678;
 }
 
@@ -49,33 +53,57 @@
 
 }
 
-.icon-active  {
+.icon-active {
   color: #FA6EB9;
 }
 
 
 
-.navLink, .activeLink {
-  padding-left: 0; /* Pour aligner le texte avec les icônes */
+.navLink,
+.activeLink {
+  padding-left: 0;
+  /* Pour aligner le texte avec les icônes */
 }
 
 
 
-.blokLinkBurger{
+.blokLinkBurger {
   padding: 30px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-.linkBurger{
+.linkBurger {
   padding-top: 30px;
 }
 
 .divider {
   width: 140px;
   height: 0.5px;
-  background: #FA6EB9; /* Utilisez la couleur de fond de votre choix */
-  margin-top: 10px; /* Ajustez l'espacement au-dessus et en dessous du diviseur */
+  background: #FA6EB9;
+  margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.customBurgerIcon {
+  background: linear-gradient(180deg, #312583 0%, #000 100%);
+  border-radius: 50%; 
+  border: 0.5px solid #4901b5; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px; 
+  cursor: pointer;
+  background: linear-gradient(90deg, #844FFC 0%, #000 100%);
+  box-shadow: 0px 20px 40px 0px #6042F4;
+}
+
+.burgerBar {
+  height: 1px;
+  width: 30px; 
+  background-color: #fa6eb983; 
+  margin: 3px 0;
 }

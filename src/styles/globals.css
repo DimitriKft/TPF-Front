@@ -1,5 +1,5 @@
 body{
-    padding: 0 200px;
+    padding: 0 40px;
     background: linear-gradient(180deg, #312583 0%, #000 100%);
     background-repeat: no-repeat;
     background-attachment: fixed; /* Optionnel: cela fixera le fond lors du défilement */
@@ -9,9 +9,9 @@ body{
 }
 
 
-@media (max-width: 700px) {
+/* @media (max-width: 700px) {
     body{
         padding: 30px;
     }
   }
-
+ */
