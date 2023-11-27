@@ -9,7 +9,6 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Drawer from '@mui/material/Drawer';
-import MenuIcon from '@mui/icons-material/Menu';
 import Box from '@mui/material/Box';
 import Image from 'next/image';
 import Stack from '@mui/material/Stack';
@@ -20,7 +19,6 @@ import AssignmentTwoToneIcon from '@mui/icons-material/AssignmentTwoTone';
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const router = useRouter();
-
   const activeLinkClass = (path: string): string => {
     return router.pathname === path ? `${styles.activeLink}` : styles.link;
   };
@@ -45,10 +43,10 @@ const Header = () => {
         <div className={styles.blokLinkBurger} >
         <Link href="/" passHref className={styles.logo}>  
             <Image
-          src="/lentille.png" // Mettez à jour avec le chemin de votre logo
+          src="/lentille.png" 
           alt="Nom de votre entreprise"
-          width={20} // La largeur désirée pour votre logo
-          height={20} // La hauteur désirée pour votre logo
+          width={20}
+          height={20} 
         />
            </Link>
           <Link href="/" passHref className={styles.linkBurger}>
@@ -78,10 +76,10 @@ const Header = () => {
           
           <Link href="/" passHref className={styles.logo}>  
             <Image
-          src="/lentille.png" // Mettez à jour avec le chemin de votre logo
+          src="/lentille.png" 
           alt="Nom de votre entreprise"
-          width={20} // La largeur désirée pour votre logo
-          height={20} // La hauteur désirée pour votre logo
+          width={20} 
+          height={20} 
         />
            </Link>
             <Link href="/" passHref >
@@ -99,10 +97,10 @@ const Header = () => {
           </Box>
           <Link href="/" passHref className={styles.logoResponsive}>  
             <Image
-          src="/lentille.png" // Mettez à jour avec le chemin de votre logo
+          src="/lentille.png" 
           alt="Nom de votre entreprise"
-          width={20} // La largeur désirée pour votre logo
-          height={20} // La hauteur désirée pour votre logo
+          width={20} 
+          height={20} 
         />
            </Link>
           <IconButton

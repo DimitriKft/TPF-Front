@@ -40,7 +40,6 @@
 
 .iconButton .icon {
   margin-right: 5px;
-  /* Espace entre l'icône et le texte */
 }
 
 .icon {
@@ -62,10 +61,7 @@
 .navLink,
 .activeLink {
   padding-left: 0;
-  /* Pour aligner le texte avec les icônes */
 }
-
-
 
 .blokLinkBurger {
   padding: 30px;
@@ -89,7 +85,6 @@
 .customBurgerIcon {
   background: linear-gradient(180deg, #312583 0%, #000 100%);
   border-radius: 50%; 
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -114,23 +109,22 @@
 }
 
 .logo img {
- font-size: 20px; /* Taille de police initiale du logo */
-  /* Transformation d'échelle pour agrandir le logo */
-  transform: scale(1.5); /* Ajustez la valeur selon vos besoins pour agrandir le logo */
-  transform-origin: center; /* Centrer le point de transformation (par défaut) */
+ font-size: 20px; 
+  
+  transform: scale(1.5); 
+  transform-origin: center;
 }
 
 
 .logoResponsive{
-  font-size: 20px; /* Taille de police initiale du logo */
-  /* Transformation d'échelle pour agrandir le logo */
-  transform: scale(1.5); /* Ajustez la valeur selon vos besoins pour agrandir le logo */
-  transform-origin: center; /* Centrer le point de transformation (par défaut) */
+  font-size: 20px; 
+  transform: scale(1.5); 
+  transform-origin: center; 
   display: none;
 }
 
 @media screen and (max-width: 1200px) {
   .logoResponsive {
-    display: block; /* Affiche le logo pour les petits écrans */
+    display: block; 
   }
 }
