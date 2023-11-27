@@ -43,6 +43,14 @@ const Header = () => {
         alignItems="center"
       >
         <div className={styles.blokLinkBurger} >
+        <Link href="/" passHref className={styles.logo}>  
+            <Image
+          src="/lentille.png" // Mettez à jour avec le chemin de votre logo
+          alt="Nom de votre entreprise"
+          width={20} // La largeur désirée pour votre logo
+          height={20} // La hauteur désirée pour votre logo
+        />
+           </Link>
           <Link href="/" passHref className={styles.linkBurger}>
             <IconButton className={styles.icon} >
               <MapsHomeWorkTwoToneIcon className={router.pathname === "/" ? styles['icon-active'] : styles.icon} />
@@ -65,8 +73,17 @@ const Header = () => {
   return (
     <Box sx={{ display: 'flex' }}>
       <AppBar className={styles.transparentAppBar} position="static">
-        <Toolbar sx={{ justifyContent: 'space-between' }}>
+      <Toolbar sx={{ justifyContent: 'space-between', alignItems: 'center', minHeight: '70px' }}>
           <Box sx={{ display: { xs: 'none', lg: 'block' }, mr: 'auto' }}>
+          
+          <Link href="/" passHref className={styles.logo}>  
+            <Image
+          src="/lentille.png" // Mettez à jour avec le chemin de votre logo
+          alt="Nom de votre entreprise"
+          width={20} // La largeur désirée pour votre logo
+          height={20} // La hauteur désirée pour votre logo
+        />
+           </Link>
             <Link href="/" passHref >
               <IconButton className={`${styles.icon} ${router.pathname === '/' ? styles.iconActive : ''}`}>
                 <MapsHomeWorkTwoToneIcon className={router.pathname === "/" ? styles['icon-active'] : styles.icon} />
@@ -80,12 +97,19 @@ const Header = () => {
               <Button className={`${styles.navLink} ${activeLinkClass('/cours')}`}>Cours</Button>
             </Link>
           </Box>
+          <Link href="/" passHref className={styles.logoResponsive}>  
+            <Image
+          src="/lentille.png" // Mettez à jour avec le chemin de votre logo
+          alt="Nom de votre entreprise"
+          width={20} // La largeur désirée pour votre logo
+          height={20} // La hauteur désirée pour votre logo
+        />
+           </Link>
           <IconButton
             color="secondary"
             aria-label="open drawer"
             onClick={handleDrawerToggle}
             sx={{ ml: 'auto', display: { xs: 'block', lg: 'none' } }}
-
           >
             <div className={styles.customBurgerIcon}>
               <span className={styles.burgerBar}></span>
