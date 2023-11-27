@@ -1,0 +1,60 @@
+.drawerPaper {
+  box-sizing: border-box;
+  width: 240px;
+  background: rgba(0, 0, 0, 0.10);
+  backdrop-filter: blur(20px);
+  backdrop-filter: blur(px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+}
+
+.transparentAppBar {
+  background-color: transparent; /* Définir la couleur de fond comme transparente */
+  box-shadow: none; /* Optionnel: supprimer l'ombre de la barre si vous le souhaitez */
+}
+
+.linkButton {
+  margin-left: 20px; /* Ajouter de la marge à gauche */
+  margin-right: 200px; /* Ajouter de la marge à droite */
+  /* ... autres styles ... */
+}
+
+.navLink {
+  color: #10D678;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 18px;
+  padding-left: 1px;
+}
+
+
+.activeLink {
+  background: linear-gradient(90deg, #FFCFAA 10.79%, #FA6EB9 70.92%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 18px;
+  padding-left: 1px;
+}
+
+
+.icon{
+  color: #10D678;
+}
+
+.iconButton {
+  display: flex;
+  align-items: center;
+padding-right: 1px;
+}
+
+.iconButton .icon {
+  margin-right: 1px; /* Adjust the spacing to your preference */
+}
+
+.icon-active  {
+  color: #FA6EB9;
+}
+

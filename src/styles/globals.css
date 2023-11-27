@@ -4,7 +4,8 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed; /* Optionnel: cela fixera le fond lors du défilement */
     background-size: cover; /* Assurez-vous que le dégradé couvre tout le body */
-    font-family: 'Poppins', sans-serif;
+
+    font-family: 'Roboto', sans-serif;
 }
 
 
@@ -13,3 +14,4 @@ body{
         padding: 30px;
     }
   }
+

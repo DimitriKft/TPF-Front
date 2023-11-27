@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import styles from './Header.module.css'; // Assurez-vous que ce fichier CSS existe et est correctement configuré
+import styles from './Header.module.css';
 import { useRouter } from 'next/router';
 import Button from '@mui/material/Button';
 import AppBar from '@mui/material/AppBar';
@@ -12,38 +12,68 @@ import Drawer from '@mui/material/Drawer';
 import MenuIcon from '@mui/icons-material/Menu';
 import Box from '@mui/material/Box';
 import Image from 'next/image';
+import Stack from '@mui/material/Stack';
+import MapsHomeWorkTwoToneIcon from '@mui/icons-material/MapsHomeWorkTwoTone';
+import AssignmentTwoToneIcon from '@mui/icons-material/AssignmentTwoTone';
+
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const router = useRouter();
+
+  const activeLinkClass = (path: string): string => {
+    return router.pathname === path ? `${styles.activeLink}` : styles.link;
+  };
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
 
+
+
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Link href="/" passHref>
-        <Button sx={{ my: 2 }}>Accueil</Button>
-      </Link>
-      <Link href="/cours" passHref>
-        <Button sx={{ my: 2 }}>Cours</Button>
-      </Link>
-      {/* ... autres liens ... */}
+    <Box
+      onClick={handleDrawerToggle}
+      sx={{ textAlign: 'center' }}
+    >
+      <Stack
+        direction="column"
+        spacing={2}
+        justifyContent="center"
+        alignItems="center"
+      >
+        <Link href="/" passHref>
+          <Button className={`${styles.navLink}  ${activeLinkClass('/')}`}>Accueil</Button>
+        </Link>
+
+        <Link href="/cours" passHref>
+          <Button className={`${styles.navLink} ${activeLinkClass('/cours')}`}>Cours</Button>
+        </Link>
+
+      </Stack>
     </Box>
   );
 
   return (
     <Box sx={{ display: 'flex' }}>
-      <AppBar position="static">
+      <AppBar className={styles.transparentAppBar} position="static">
         <Toolbar sx={{ justifyContent: 'space-between' }}>
-          {/* Logo et liens seront visibles seulement en vue large (sm et plus) */}
           <Box sx={{ display: { xs: 'none', sm: 'block' }, mr: 'auto' }}>
-            <Link href="/" passHref>
-              <Image src="/logoTpf.svg" alt="Logo" width={120} height={60} />
+            <Link href="/" passHref >
+
+            <IconButton className={`${styles.icon} ${router.pathname === '/' ? styles.iconActive : ''}`}>
+              <MapsHomeWorkTwoToneIcon  className={router.pathname === "/" ? styles['icon-active'] : styles.icon} />
+            </IconButton>
+
+              <Button className={`${styles.navLink} ${activeLinkClass('/')}`}>Accueil</Button>
             </Link>
-            {/* ... autres liens ... */}
+            <Link href="/cours" passHref >
+              <IconButton className={styles.icon}>
+                <AssignmentTwoToneIcon />
+              </IconButton>
+              <Button className={`${styles.navLink} ${activeLinkClass('/cours')}`}>Cours</Button>
+            </Link>
           </Box>
-          {/* IconButton pour le menu burger, maintenant à droite */}
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -55,11 +85,12 @@ const Header = () => {
         </Toolbar>
       </AppBar>
       <Drawer
+        classes={{ paper: styles.drawerPaper }}
         variant="temporary"
         open={mobileOpen}
         onClose={handleDrawerToggle}
         ModalProps={{
-          keepMounted: true, // Meilleure performance d'ouverture sur mobile.
+          keepMounted: true,
         }}
         sx={{
           display: { xs: 'block', sm: 'none' },
