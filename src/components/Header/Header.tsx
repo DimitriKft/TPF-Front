@@ -42,13 +42,18 @@ const Header = () => {
         justifyContent="center"
         alignItems="center"
       >
-        <Link href="/" passHref>
-          <Button className={`${styles.navLink}  ${activeLinkClass('/')}`}>Accueil</Button>
-        </Link>
-
-        <Link href="/cours" passHref>
-          <Button className={`${styles.navLink} ${activeLinkClass('/cours')}`}>Cours</Button>
-        </Link>
+        <Link href="/" passHref >
+            <IconButton className={`${styles.icon} ${router.pathname === '/' ? styles.iconActive : ''}`}>
+              <MapsHomeWorkTwoToneIcon  className={router.pathname === "/" ? styles['icon-active'] : styles.icon} />
+            </IconButton>
+              <Button className={`${styles.navLink} ${activeLinkClass('/')}`}>Accueil</Button>
+            </Link>
+            <Link href="/cours" passHref >
+              <IconButton className={styles.icon}>
+                <AssignmentTwoToneIcon />
+              </IconButton>
+              <Button className={`${styles.navLink} ${activeLinkClass('/cours')}`}>Cours</Button>
+            </Link>
 
       </Stack>
     </Box>
@@ -60,11 +65,9 @@ const Header = () => {
         <Toolbar sx={{ justifyContent: 'space-between' }}>
           <Box sx={{ display: { xs: 'none', sm: 'block' }, mr: 'auto' }}>
             <Link href="/" passHref >
-
             <IconButton className={`${styles.icon} ${router.pathname === '/' ? styles.iconActive : ''}`}>
               <MapsHomeWorkTwoToneIcon  className={router.pathname === "/" ? styles['icon-active'] : styles.icon} />
             </IconButton>
-
               <Button className={`${styles.navLink} ${activeLinkClass('/')}`}>Accueil</Button>
             </Link>
             <Link href="/cours" passHref >
