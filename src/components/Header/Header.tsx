@@ -34,7 +34,7 @@ const Header = () => {
   const drawer = (
     <Box 
       onClick={handleDrawerToggle}
-      sx={{ textAlign: 'center' }}
+      sx={{ ml: 'auto', display: { xs: 'block', md: 'none' } }}
     >
       <Stack
         direction="column"
@@ -44,7 +44,7 @@ const Header = () => {
       >
         <div className={styles.blokLinkBurger} >
         <Link href="/" passHref className={styles.linkBurger}>
-            <IconButton className={styles.icon}>
+            <IconButton className={styles.icon} >
               <MapsHomeWorkTwoToneIcon  className={router.pathname === "/" ? styles['icon-active'] : styles.icon} />
             </IconButton>
               <Button className={`${styles.navLink} ${activeLinkClass('/')}`}>Accueil</Button>
@@ -66,7 +66,7 @@ const Header = () => {
     <Box sx={{ display: 'flex' }}>
       <AppBar className={styles.transparentAppBar} position="static">
         <Toolbar sx={{ justifyContent: 'space-between' }}>
-          <Box sx={{ display: { xs: 'none', sm: 'block' }, mr: 'auto' }}>
+        <Box sx={{ display: { xs: 'none', lg: 'block' }, mr: 'auto' }}>
             <Link href="/" passHref >
             <IconButton className={`${styles.icon} ${router.pathname === '/' ? styles.iconActive : ''}`}>
               <MapsHomeWorkTwoToneIcon  className={router.pathname === "/" ? styles['icon-active'] : styles.icon} />
@@ -84,7 +84,7 @@ const Header = () => {
             color="inherit"
             aria-label="open drawer"
             onClick={handleDrawerToggle}
-            sx={{ ml: 'auto', display: { xs: 'block', sm: 'none' } }}
+            sx={{ ml: 'auto', display: { xs: 'block', lg: 'none' } }} 
           >
             <MenuIcon />
           </IconButton>
@@ -99,8 +99,8 @@ const Header = () => {
           keepMounted: true,
         }}
         sx={{
-          display: { xs: 'block', sm: 'none' },
-          '& .MuiDrawer-paper': { boxSizing: 'border-box', width: 240 },
+          display: { xs: 'block', lg: 'none' }, // Changement ici
+          // Autres styles
         }}
       >
         {drawer}
